@@ -54,8 +54,7 @@ jobs:
                   audio_data = f.read()
 
               audio_part = {"mime_type": "audio/webm", "data": audio_data} # Changed mime_type to audio/webm
-              #audio_part = {"mime_type": "audio/mp3", "data": audio_data} # Adjust mime_type if needed (see supported formats in Gemini docs)
-
+              
               response = model.generate_content(
                   contents=[
                       "Generate a transcript of the speech in this audio.", # Prompt for transcription
